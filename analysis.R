@@ -45,7 +45,7 @@ ggsave(filename = "plot0.pdf", plot = plot0, width = 10, height = 7.5, units = "
 cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
 plot1 <- ggplot(data = payments, aes(x = Average.Covered.Charges, y = Average.Total.Payments)) +
-        geom_point(size = .2, aes(color = DRG.Definition)) +
+        geom_point(size = .5, aes(color = DRG.Definition)) +
         geom_smooth(aes(color = DRG.Definition), method = 'lm', se = FALSE) +
         scale_color_manual(values=cbPalette) +
         scale_x_log10(name = "Mean Covered Charges\n(log scale in $)") + 
